@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>TweeterProject</servlet-name>
+		<servlet-class>TweeterProjectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TweeterProject</servlet-name>
+		<url-pattern>/</url-pattern>
+		<!-- <url-pattern>/tweeterproject</url-pattern> -->
+	</servlet-mapping>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>TweeterProject</web-resource-name>
+			<url-pattern>/</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+	
+	<!-- <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list> -->
+	
+	<servlet>
+		<servlet-name>Tweet</servlet-name>
+		<servlet-class>Tweet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tweet</servlet-name>
+		<url-pattern>/tweet</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Tweet</web-resource-name>
+			<url-pattern>/</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+	
+
+
+	<servlet>
+		<servlet-name>Display_Tweet</servlet-name>
+		<servlet-class>Display_Tweet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Display_Tweet</servlet-name>
+		<url-pattern>/display_tweet</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Display_Tweet</web-resource-name>
+			<url-pattern>/</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+
+	<servlet>
+		<servlet-name>TopTweets</servlet-name>
+		<servlet-class>TopTweets</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TopTweets</servlet-name>
+		<url-pattern>/toptweets</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>TopTweets</web-resource-name>
+			<url-pattern>/</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+
+	<servlet>
+		<servlet-name>FriendsPage</servlet-name>
+		<servlet-class>FriendsPage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FriendsPage</servlet-name>
+		<url-pattern>/friendspage</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>FriendsPage</web-resource-name>
+			<url-pattern>/</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+
+</web-app>
